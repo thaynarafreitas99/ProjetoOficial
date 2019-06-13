@@ -1,0 +1,45 @@
+.menu a{
+	color:#000;
+	text-align: center;
+	
+  
+}
+
+a{
+		margin: 10px;
+		padding: 5px;
+}
+
+nav{
+		border: 2px solid #00FFFF;
+
+}
+
+table th{
+	background-color: #fff;
+}
+
+table{
+	text-align: center;
+}
+
+.p1{
+	background-color: #008B8B	;
+
+}
+
+.p2{
+		background-color:#48D1CC	;
+
+}
+
+.p3{
+		background-color: #00FFFF;
+
+}
+
+.p4{
+		background-color: #7FFFD4;
+
+}
+
