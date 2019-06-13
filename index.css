@@ -1,0 +1,117 @@
+body,h1 {font-family: "Raleway", sans-serif}
+
+body, html {height: 100%; width: 100%; overflow: none; padding: 0; margin:0;}
+
+.bgimg {
+  background-image: url('images/carro.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+
+/*--------------------
+4.6. Team
+--------------------*/
+
+.team-item {
+	text-align: center;
+	background-color: #000;
+}
+
+.team-item h3 {
+	font-size: 16px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #2D2D2D;
+}
+
+.team-item .team-position {
+	color: #989898;
+	font-size: 12px;
+	margin: 15px 0 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.team-item p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #292929;
+    padding: 5px 10px 20px 10px;
+}
+
+.team-socials {
+	padding-bottom: 25px;
+}
+
+.team-socials a {
+    color: #B2B3B7;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.team-socials a:hover {
+	color: #000;
+}
+
+.img-responsive{
+	width: 50%;
+	max-height: 120px;
+}
+
+.img-responsive:hover{
+}
+
+
+.bgimg2{
+background-image: url('images/img.jpg');  
+position: center top;
+background-size: cover;	
+background-repeat: no-repeat;
+background-attachment: fixed;
+padding-top: 200px;
+padding-bottom: 200px;
+min-height: 100%;
+width: 100%;
+}
+
+.content-site{
+	padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.terceiro-site{
+	padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.footer-site{
+	background-color: #000;
+	color: #ffff;
+	padding-top: 50px;
+padding-bottom: 50px;
+}
+
+.img-site2{
+	background-image: url('images/onibus.jpg');  
+	position: center top;
+	background-size: cover;	
+  background-repeat: no-repeat;
+   background-attachment: fixed;
+padding-top: 200px;
+padding-bottom: 200px;
+}
+
+
+@media only screen and (max-width:500px) {
+
+
+
+}
+
+
+

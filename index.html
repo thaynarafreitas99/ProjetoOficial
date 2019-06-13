@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pt-br"> <!--define o idioma português-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Responsivo-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><!--Biblioteca do W3-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> <!--Biblioteca do W3-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!--BOOTSTRAP-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><!--JQUERY-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+
+<link rel="stylesheet" type="text/css" href="index.css"> <!--HIPERLINK CSS-->
+
+<title> BUSCAR </title>
+</head>
+
+<body>
+
+  
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" 
+style="
+z-index:3;
+width:300px;
+font-weight:bold;
+display:none;
+right:0;"
+id="mySidebar"
+> 
+</br></br></br>
+
+
+<!--FORMULÁRIO DE LOGIN QUE ABRE AO CLICAR NO BOTÃO-->
+<form   class="w3-bar-item w3-button w3-center w3-padding-16 "id="meuFormulario" action="principal3.html">
+<div class="form-group">
+<label for="email">E-mail:</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+</div>
+<div class="form-group">
+<label for="pwd">Senha:</label>
+<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+</div>
+<div class="form-group form-check">
+<label class="form-check-label">
+<input class="form-check-input" type="checkbox" name="remember"> Lembre-me
+</label>
+</div>
+<button type="submit" class="btn btn-primary" id="entrar">Entrar</button></form>
+<button  class="btn btn-primary" onclick="document.getElementById('menu').style.display='block'" style="margin-left: 95px;"> Cadastre-se</button>
+</nav>
+
+<!--FORMULÁRIO DE CADASTRO-->
+
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>CADASTRO</h1>
+    </div>
+    <form action="/action_page.php" target="_blank" style="padding:30px;">
+      <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Data de Nascimento" required name="Data de Nascimento"></p>
+      <p><input class="w3-input w3-border" type="email" placeholder="E-mail" required name="Titulo"></p>
+      <p><input class="w3-input w3-border" type="tel" placeholder="Whatsapp" required name="Mensagem"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="R.A" required name="Mensagem"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Definir Senha" required name="Defina uma senha"></p>
+      <p><select id="unidade" class="w3-input w3-border" placeholder="Unidade USJT" required name="Unidade USJT"></p>
+      <option value="Se">Unidade USJT</option>
+      <option value="MO">Mooca</option>
+      <option value="LE">Leopoldina</option>
+      <option value="BU">Butantã</option>
+      <option value="GU">Guarulhos</option>
+      <option value="CU">Cubatão</option>
+      <option value="PA">Paulista</option>
+      <option value="SA">Santana</option>
+      <option value="SAN">Santo Amaro</option>
+      <option value="UNI">Unimonte</option>
+      <option value="SA">São Bernado do Campo</option>
+      </select>
+
+      <p><input class="w3-input w3-border" id="cep" type="text" placeholder="CEP" required name="Mensagem"></p>
+      <p><input class="w3-input w3-border" id="logradouro" type="text" placeholder="Logradouro" required name="Logradouro"></p>
+      <p><input class="w3-input w3-border" id="numero" type="text" placeholder="Número" required name="Número"></p>
+      <p><input class="w3-input w3-border" id="complemento" type="text" placeholder="complemento" required name="Complemento"></p>
+      <p><input class="w3-input w3-border" id="bairro" type="text" placeholder="Bairro" required name="Bairro"></p>
+      <p><select id="uf" class="w3-input w3-border" placeholder="Estado" required name="Estado"></p>
+      <option class="w3-input w3-border"  value="Se">Estado</option>
+      <option value="AC">Acre</option>
+      <option value="AL">Alagoas</option>
+      <option value="AP">Amapá</option>
+      <option value="AM">Amazonas</option>
+      <option value="BA">Bahia</option>
+      <option value="CE">Ceará</option>
+      <option value="DF">Distrito Federal</option>
+      <option value="ES">Espírito Santo</option>
+      <option value="GO">Goiás</option>
+      <option value="MA">Maranhão</option>
+      <option value="MT">Mato Grosso</option>
+      <option value="MS">Mato Grosso do Sul</option>
+      <option value="MG">Minas Gerais</option>
+      <option value="PA">Pará</option>
+      <option value="PB">Paraíba</option>
+      <option value="PR">Paraná</option>
+      <option value="PE">Pernambuco</option>
+      <option value="PI">Piauí</option>
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="RN">Rio Grande do Norte</option>
+      <option value="RS">Rio Grande do Sul</option>
+      <option value="RO">Rondônia</option>
+      <option value="RR">Roraima</option>
+      <option value="SC">Santa Catarina</option>
+      <option value="SP">São Paulo</option>
+      <option value="SE">Sergipe</option>
+      <option value="TO">Tocantins</option>
+    </select>
+
+      <p><input class="w3-input w3-border" type="text" placeholder="Trajeto" required name="Mensagem"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Ônibus ou Carro?" required name="Mensagem"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> Cadastre-se
+        </button>
+      </p>
+    </form>
+  </div>
+</div>
+  
+  <script type="text/javascript">
+    $("#cep").focusout(function(){
+      //Início do Comando AJAX
+      $.ajax({
+        //O campo URL diz o caminho de onde virá os dados
+        //É importante concatenar o valor digitado no CEP
+        url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+        //Aqui você deve preencher o tipo de dados que será lido,
+        //no caso, estamos lendo JSON.
+        dataType: 'json',
+        //SUCESS é referente a função que será executada caso
+        //ele consiga ler a fonte de dados com sucesso.
+        //O parâmetro dentro da função se refere ao nome da variável
+        //que você vai dar para ler esse objeto.
+        success: function(resposta){
+          //Agora basta definir os valores que você deseja preencher
+          //automaticamente nos campos acima.
+          $("#logradouro").val(resposta.logradouro);
+          $("#complemento").val(resposta.complemento);
+          $("#bairro").val(resposta.bairro);
+          $("#cidade").val(resposta.localidade);
+          $("#uf").val(resposta.uf);
+          //Vamos incluir para que o Número seja focado automaticamente
+          //melhorando a experiência do usuário
+          $("#numero").focus();
+        }
+      });
+    });
+  </script>
+
+<script>
+//SCRIPT QUE ABRE O MENU
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+<script>
+
+ $(document).ready(function(){
+
+  $('#meuFormulario').on('submit', function(e){
+          e.preventDefault();
+          var email = $('#email').val().length;
+          var pwd = $('#pwd').val().length;
+          if (email > 0 && pwd > 0) {
+              localStorage.setItem("email", $('#email').val());
+              localStorage.setItem("pwd", $('#pwd').val());
+              this.submit();
+          }else{
+            alert("Você deve preencher o usuário e senha!")
+          }
+      });
+
+  });
+
+</script>
+
+
+<!-- LOGIN  ☰ -->
+<header class="w3-container w3-top ">
+<a href="javascript:void(0)" class="w3-right w3-button " onclick="w3_open()" style="color: #fff; font-size: 18pt; margin-right: 50px;"> Login </a>
+</header>
+
+<!-- TELA PRINCIPAL TITULO -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white"> 
+<div class="w3-display-middle">
+  <h1 class="w3-jumbo w3-animate-top" id="home"> <img src="images/logo.png" > </h1>
+  <p class="w3-large w3-center" class="revealOnScroll" data-animation="lightSpeedIn"> A companhia ideal para o seu trajeto</p>
+  <hr class="w3-border-grey" style="margin:auto;width:40%">
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+  </div>
+</div>
+
+
+<!-- segunda parte - logos  ☰ -->
+
+<section class="content-site">
+<div class="w3-container" id="about">
+  <h3 class="w3-center">O SEU TRAJETO NUNCA MAIS SERÁ O MESMO</h3>
+  <p class="w3-center w3-large">Pois agregaremos a ele:</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">TECNOLOGIA</p>
+      <p>Usando a tecnologia para conectar alunos da São Judas que tem o mesmo trajeto para a faculdade e para suas casas. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">AMIZADE</p>
+      <p>Não somente conectar, mas investir para que sejam desenvolvidas novas amizades.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-comments-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">BATE-PAPO</p>
+      <p>Alguém para te tirar do tédio, com muito bate-papo. Você chegará tão rápido no seu trajeto final, que nem perceberá a distância. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">SEGURANÇA</p>
+      <p>Tendo conhecimento dos riscos de se andar sozinho após a faculdade, uma companhia pode oferecer maior segurança.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- imagem do mobile  ☰ -->
+
+<div class="bgimg2">
+  <div class="container">
+  <div class="row">
+  <div class="col-xs-12">
+
+<div class="w3-white w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large" style="max-width: 300px;">
+        <h1 class="w3-xlarge w3-center">Tudo isso perto de você.</h1>
+        <hr class="w3-opacity ">
+        <p class="w3-center">Conheça nosso aplicativo, disponível para IOS e Android. </br>Lá você encontra todas funcionalidades presentes </br> do nosso site, não perca tempo. </p>
+        <p><button class="w3-button w3-block w3-black w3-round" onclick="document.getElementById('download').style.display='block'">Instalar </button></p>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+
+<!-- graficos  ☰ -->
+
+<div class="w3-container w3-white w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 class="w3-center">SUA COMPANHIA TE ESPERA</h3>
+      <p class="w3-center">Alunos da São Judas já se conectaram a nossa plataforma e já estão com companhias para seu trajeto de ônibus/carro.</p>
+      <p class="w3-center">O que você está esperando para se conectar?</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide">Ônibus</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-black w3-center" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide">Carro</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-black w3-center" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide">Carona</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-black w3-center" style="width:75%">75%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- imagem do horário dos ônibus  ☰ -->
+
+
+<section class="img-site2">
+  <div class="container">
+  <div class="row">
+  <div class="col-xs-12">
+
+<div class="w3-white w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large" style="max-width: 300px;">
+        <h1 class="w3-xlarge w3-center">LINHAS E HORÁRIOS DE ÔNIBUS</h1>
+        <hr class="w3-opacity ">
+        <p class="w3-center"> Todas as linhas de ônibus e mapas das estações dísponíveis para você. </br> Não fique mais precupado em qual será o próximo ônibus quando for dispensado mais cedo, tudo estará a um click.  </p>
+      </div>
+</div>
+  </div>
+  </div>
+</section>
+
+
+
+
+<!-- parte de contato  ☰ -->
+
+<div class="w3-container w3-white" style="padding:15px" id="contact">
+  <h3 class="w3-center">CONTATO</h3>
+  <p class="w3-center w3-large">Sua opinião é importante. Envie-nos uma mensagem:</p>
+  <div style="margin-top:48px">
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="E-mail" required name="E-mail"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Titulo" required name="Titulo"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Mensagem"></p>
+      <p>
+        <button class="w3-button w3-black" >
+          <i class="fa fa-paper-plane"></i> Envie sua mensagem
+        </button>
+      </p>
+    </form>
+  </div>
+  </div>
+
+
+<!-- rodapé  ☰ -->
+
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Voltar ao inicio</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Obrigada por sua visita </p> </br>
+
+  <section id="team" class="light-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+          </div>
+        </div>
+        <div class="row">
+          <!-- team member item -->
+          <div class="col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <img src="images/ahmed.jpg" class="img-responsive" alt="author">
+              </div>
+              <div class="team-text">
+                <h3>AHMED SALEH</h3>
+                <div class="team-socials">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end team member item -->
+          <!-- team member item -->
+          <div class="col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <img src="images/antonio.jpg" class="img-responsive" alt="author">
+              </div>
+              <div class="team-text">
+                <h3>ANTÔNIO PELICHO</h3>
+                <div class="team-socials">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end team member item -->
+          <!-- team member item -->
+          <div class="col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <img src="images/gustavo.jpg" class="img-responsive" alt="author">
+              </div>
+              <div class="team-text">
+                <h3>GUSTAVO OLIVEIRA</h3>
+                <div class="team-socials">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <img src="images/hadassa.jpg" class="img-responsive" alt="author">
+              </div>
+              <div class="team-text">
+                <h3>HADASSA CAMPOS</h3>
+                <div class="team-socials">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- end team member item -->
+          <!-- team member item -->
+          <div class="col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <img src="images/heloisa.jpg" class="img-responsive" alt="author">
+              </div>
+              <div class="team-text">
+                <h3>HELOISA REIS</h3>
+                <div class="team-socials">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end team member item -->
+          <!-- team member item -->
+          <div class="col-md-4">
+            <div class="team-item">
+              <div class="team-image">
+                <img src="images/thaynara.jpg" class="img-responsive" alt="author">
+              </div>
+              <div class="team-text">
+                <h3>THAYNARA FREITAS</h3>
+                <div class="team-socials">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end team member item -->
+        </div>
+          <!-- end team member item -->
+        </div>
+
+      </div>
+</section>
+</footer>
+ 
+
+<!-- modal de cadastre-se  ☰ -->
+
+
+
+</body>
+</html>
